@@ -1,0 +1,27 @@
+# Rider Settings
+RIDER_WEIGHT: 71.1    # My scales said 71.1, BR scales 1kg less, check the Total Weight plot 
+
+# Bike settings
+BIKE_WEIGHT: 11.1     # Cadex bike without rod+discs
+ROD_DISC_WEIGHT: 0 #0.25 # Rod with 2x T-Clamp = 183.1g, 100mm discs with T-Clamp = 60.5g (Total 244g)  40mm discs with T-Clamp = 38.5g
+
+CRR: 0.0025           # BR setting (see summary.csv files)
+BIKE_DTL: 2.0         # Anna now using 2% (see summary.csv files)! 
+
+# Wheel settings usually refer to the front wheel where the speed sensor is positioned 
+WHEEL_CIRC_ACTUAL: 2092  # Cadex front 2092 (Giant front 2109)
+WHEEL_CIRC_BR_SETTING: 2100 
+REAR_WHEEL_CIRC: 2092   # Cadex rear 2092 (Giant rear 2111) - needed for determining speeds from cadence and crank angle delta
+CHAINRING: 56.0         # Cadex 56 (Giant 53)
+SPROCKET: 17            # from BR gear ratio setting of 3.3 check Cadence vs Ground Speed (could change gear! see code under "Add MORE FIELDS" where sprocket can be calculated)
+
+# Height settings 
+COM_HEIGHT: 1.07        # using saddle height +8cm for Centre of Mass for both rider and bike (saddle was actually 1.02 for me and 0.99 for George)
+COM_RIDER_HEIGHT: 1.17  # 10cm higher than COM_HEIGHT as bike mass is excluded so all weight in body and legs. 
+COP_HEIGHT: 1.17        # Centre of Pressure (centre of Frontal Area) - will be slightly higher than CoM (~10cm) as FA of bike is much smaller for its mass (displaced more lengthwise)
+COP_RIDER_HEIGHT: 1.22  # keeping this close to COP_HEIGHT (+5cm) because FA of bike is small and addition of rod and discs lower than saddle will offset this 
+PITOT_HEIGHT: 0.72      # Height of Pitot tube where air speed is measured (720mm for Cadex, 760mm for Giant)
+
+# Temp Sensor used
+TEMP_SENSOR_RHO: temp103T    # temp103T (HB Inclinometer) field used by BR for calculating Air Density (instead of usual Temp_C from Aerohead)
+
